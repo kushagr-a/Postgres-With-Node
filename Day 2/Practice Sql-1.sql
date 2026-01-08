@@ -108,17 +108,17 @@ WHERE rating IN (3,4);
 -- Q7 --
 SELECT *
 FROM courses
-WHERE price BETWEEN 9000 AND 15000
+WHERE price BETWEEN 9000 AND 15000;
 
 -- Q8 --
 SELECT * 
 FROM courses
-WHERE student_name LIKE 'T%'
+WHERE student_name LIKE 'T%';
 
 -- Q9 --
 SELECT * 
 FROM courses
-WHERE completion_status = 'True'
+WHERE completion_status = 'True';
 
 -- Q10 --
 SELECT *
@@ -129,4 +129,23 @@ WHERE 'JavaScript' = ANY (skills);
 -- Q11 --
 SELECT SUM(price) AS Total_revenue FROM courses;
 
+-- Q12 --
+SELECT AVG(price) As Every_Level
+FROM courses
+GROUP BY level;
+
+-- Q13 --
+SELECT * 
+FROM courses
+WHERE course_meta->> 'duration' = '10 months'
+
+-- Q14 --
+SELECT *
+FROM courses
+WHERE array_length(skills, 1) >= 4;
+
+-- Q15 --
+SELECT completion_status, COUNT(*)
+FROM courses
+GROUP BY completion_status;
 
