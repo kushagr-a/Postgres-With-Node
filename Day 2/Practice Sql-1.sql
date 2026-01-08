@@ -99,12 +99,34 @@ FROM courses
 ORDER BY price  DESC
 LIMIT 5;
 
+----------------------------------- Now Intermidiate Ques ---------------------------------------
+-- Q6 --
+SELECT *
+FROM courses
+WHERE rating IN (3,4);
 
+-- Q7 --
+SELECT *
+FROM courses
+WHERE price BETWEEN 9000 AND 15000
 
+-- Q8 --
+SELECT * 
+FROM courses
+WHERE student_name LIKE 'T%'
 
+-- Q9 --
+SELECT * 
+FROM courses
+WHERE completion_status = 'True'
 
+-- Q10 --
+SELECT *
+FROM courses
+WHERE 'JavaScript' = ANY (skills);
 
-
-
+--------------------- Advance --------------
+-- Q11 --
+SELECT SUM(price) AS Total_revenue FROM courses;
 
 
