@@ -25,3 +25,52 @@ ADD COLUMN rating VARCHAR(10) DEFAULT 'PG-13';
 -- Add column with NOT NULL constraint (must provide default or populate existing rows)
 ALTER TABLE movies
 ADD COLUMN duration_minutes INTEGER NOT NULL DEFAULT 120;
+
+--------------------------------------Dropping columns ---------------------
+-- Just Check --
+SELECT * FROM movies
+
+-- Drop single table --
+ALTER TABLE movies
+DROP COLUMN rating;
+
+-- Drop multiple columns --
+ALTER TABLE movies
+DROP COLUMN box_office,
+DROP COLUMN duration_minutes;
+
+-- Drop column with CASCADE (removes dependent objects) --
+-- Parent -to> Child relations -- 
+ALTER TABLE movies
+DROP COLUMN director CASCADE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
