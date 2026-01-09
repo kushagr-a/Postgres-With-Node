@@ -125,4 +125,4 @@ SELECT * FROM courses WHERE array_length (skills, 1) >= 4;
 SELECT completion_status, COUNT(*)
 FROM courses
 GROUP BY
-    completion_status;
+completion_status;
