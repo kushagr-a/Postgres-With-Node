@@ -44,6 +44,19 @@ DROP COLUMN duration_minutes;
 ALTER TABLE movies
 DROP COLUMN director CASCADE;
 
+--------------------------------------------------- Renaming -----------------------------------------------------------
+-- Rename a column --
+ALTER TABLE movies
+RENAME COLUMN release_year TO year_released;
+
+-- Rename multiple times to fix naming --
+-- PostgreSQL allows only one column rename per ALTER TABLE statement --
+ALTER TABLE movies
+RENAME COLUMN title TO movie_title;
+
+ALTER TABLE movies
+RENAME COLUMN movie_title TO film_title;
+
 
 
 
