@@ -1,3 +1,4 @@
+
 -- Create our base table
 CREATE TABLE movies (
     movie_id SERIAL PRIMARY KEY,
@@ -96,14 +97,37 @@ DROP COLUMN payment_method;
 ALTER TABLE streaming_users
 ALTER COLUMN username TYPE VARCHAR(30);
 
+-- CASE expressions allow conditional logic in SQL queries - like if/else statements.
 
+-- Create sample data
+CREATE TABLE viewer_activity (
+    activity_id SERIAL PRIMARY KEY,
+    user_id INTEGER,
+    movie_id INTEGER,
+    watch_percentage INTEGER,
+    watched_date DATE
+);
 
+INSERT INTO viewer_activity (user_id, movie_id, watch_percentage, watched_date) VALUES
+(1, 101, 100, '2025-01-01'),
+(2, 102, 45, '2025-01-02'),
+(3, 103, 75, '2025-01-02'),
+(4, 104, 20, '2025-01-03'),
+(5, 105, 90, '2025-01-03');
 
+SELECT * FROM viewer_activity
 
-
-
-
-
+-- Simple CASE: categorize viewing behavior
+SELECT 
+ activity_id,
+ user_id,
+ watch_percentage,
+ CASE
+   WHEN watch_percentage >= 90 THEN 'Completed'
+   WHEN watch_percentage >= 50 THEN 'Partial'
+   WHEN watch_percentage >= 20 THEN 'Started'
+  END AS viewer_status
+FROM viewer_activity
 
 
 
