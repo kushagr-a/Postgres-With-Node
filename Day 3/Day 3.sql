@@ -181,7 +181,7 @@ WHERE
 	  WHEN genre = 'Comedy' THEN rating >= 6.5
 	  ELSE rating >= 8.0
 	END;
-
+ 
 
 
 
