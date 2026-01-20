@@ -42,3 +42,9 @@ SELECT s.name, c.class_name
 FROM students s
 RIGHT JOIN classes c
 ON s.class_id = c.class_id;
+
+--- Full outer Joins ---
+SELECT s.name, c.class_name
+FROM students s
+FULL OUTER JOIN classes c
+ON s.class_id = c.class_id;
