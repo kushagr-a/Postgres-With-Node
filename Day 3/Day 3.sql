@@ -420,7 +420,7 @@ INSERT INTO content_ratings VALUES
 ('R', 'Restricted');
 
 SELECT * FROM content_ratings; 
-
+    
 
 
 
