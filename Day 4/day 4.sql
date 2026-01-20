@@ -48,3 +48,26 @@ SELECT s.name, c.class_name
 FROM students s
 FULL OUTER JOIN classes c
 ON s.class_id = c.class_id;
+
+--- Cross join -- Posible outcomes --- Cartitaon product --
+SELECT s.name, c.class_name
+FROM students s
+CROSS JOIN classes c;
+
+
+
+
+
+
+
+
+
+
+--------- Views ----------------
+CREATE VIEW student_classes AS
+SELECT s.name, c.class_name
+FROM students s
+INNER JOIN classes c
+ON s.class_id = c.class_id;
+
+SELECT * FROM student_classes;
