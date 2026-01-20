@@ -419,7 +419,7 @@ INSERT INTO content_ratings VALUES
 ('PG-13', 'Parents Strongly Cautioned'),
 ('R', 'Restricted');
 
-SELECT * FROM content_ratings;
+SELECT * FROM content_ratings; 
 
 
 
