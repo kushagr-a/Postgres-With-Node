@@ -58,12 +58,6 @@ CROSS JOIN classes c;
 
 
 
-
-
-
-
-
-
 --------- Views ----------------
 CREATE VIEW student_classes AS
 SELECT s.name, c.class_name
